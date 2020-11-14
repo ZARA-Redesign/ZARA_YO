@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -62,7 +62,6 @@
 				4C09DB83B18CC98463070A0E /* Pods-ZARA.debug.xcconfig */,
 				01B96CC55F323BF03A53C457 /* Pods-ZARA.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,18 +86,58 @@
 		F237F85D255F9C8200527BBA /* ZARA */ = {
 			isa = PBXGroup;
 			children = (
-				F237F85E255F9C8200527BBA /* AppDelegate.swift */,
-				F237F860255F9C8200527BBA /* SceneDelegate.swift */,
-				F237F862255F9C8200527BBA /* ViewController.swift */,
 				F237F864255F9C8200527BBA /* Main.storyboard */,
-				F237F873255F9D7100527BBA /* Yoonjin.storyboard */,
-				F237F876255F9DF900527BBA /* Seohyun.storyboard */,
-				F237F879255F9E0300527BBA /* Hwangho.storyboard */,
-				F237F867255F9C8300527BBA /* Assets.xcassets */,
-				F237F869255F9C8300527BBA /* LaunchScreen.storyboard */,
-				F237F86C255F9C8300527BBA /* Info.plist */,
+				F2C502C9255FC73D008432F7 /* Yoonjin */,
+				F2C502CB255FC783008432F7 /* Seohyun */,
+				F2C502CC255FC78A008432F7 /* Hwangho */,
+				F2C502CD255FCA82008432F7 /* Resources */,
+				F2C502CE255FCB7C008432F7 /* Supporting Files */,
 			);
 			path = ZARA;
+			sourceTree = "<group>";
+		};
+		F2C502C9255FC73D008432F7 /* Yoonjin */ = {
+			isa = PBXGroup;
+			children = (
+				F237F862255F9C8200527BBA /* ViewController.swift */,
+				F237F873255F9D7100527BBA /* Yoonjin.storyboard */,
+			);
+			path = Yoonjin;
+			sourceTree = "<group>";
+		};
+		F2C502CB255FC783008432F7 /* Seohyun */ = {
+			isa = PBXGroup;
+			children = (
+				F237F876255F9DF900527BBA /* Seohyun.storyboard */,
+			);
+			path = Seohyun;
+			sourceTree = "<group>";
+		};
+		F2C502CC255FC78A008432F7 /* Hwangho */ = {
+			isa = PBXGroup;
+			children = (
+				F237F879255F9E0300527BBA /* Hwangho.storyboard */,
+			);
+			path = Hwangho;
+			sourceTree = "<group>";
+		};
+		F2C502CD255FCA82008432F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F237F867255F9C8300527BBA /* Assets.xcassets */,
+				F237F860255F9C8200527BBA /* SceneDelegate.swift */,
+				F237F85E255F9C8200527BBA /* AppDelegate.swift */,
+				F237F869255F9C8300527BBA /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F2C502CE255FCB7C008432F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F237F86C255F9C8300527BBA /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,7 +409,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F725AJ242J;
-				INFOPLIST_FILE = ZARA/Info.plist;
+				INFOPLIST_FILE = "ZARA/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,7 +429,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F725AJ242J;
-				INFOPLIST_FILE = ZARA/Info.plist;
+				INFOPLIST_FILE = "ZARA/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
