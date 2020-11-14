@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B5114FEA7FD04E86AE06EF91 /* Pods_ZARA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1E3F848C3CA0886A92A9E5 /* Pods_ZARA.framework */; };
 		F237F85F255F9C8200527BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F85E255F9C8200527BBA /* AppDelegate.swift */; };
 		F237F861255F9C8200527BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F860255F9C8200527BBA /* SceneDelegate.swift */; };
 		F237F863255F9C8200527BBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F862255F9C8200527BBA /* ViewController.swift */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01B96CC55F323BF03A53C457 /* Pods-ZARA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZARA.release.xcconfig"; path = "Target Support Files/Pods-ZARA/Pods-ZARA.release.xcconfig"; sourceTree = "<group>"; };
+		4C09DB83B18CC98463070A0E /* Pods-ZARA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZARA.debug.xcconfig"; path = "Target Support Files/Pods-ZARA/Pods-ZARA.debug.xcconfig"; sourceTree = "<group>"; };
 		F237F85B255F9C8200527BBA /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F237F85E255F9C8200527BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F237F860255F9C8200527BBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		F237F873255F9D7100527BBA /* Yoonjin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Yoonjin.storyboard; sourceTree = "<group>"; };
 		F237F876255F9DF900527BBA /* Seohyun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Seohyun.storyboard; sourceTree = "<group>"; };
 		F237F879255F9E0300527BBA /* Hwangho.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hwangho.storyboard; sourceTree = "<group>"; };
+		FA1E3F848C3CA0886A92A9E5 /* Pods_ZARA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZARA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5114FEA7FD04E86AE06EF91 /* Pods_ZARA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16C070BDC1478B2216B65234 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA1E3F848C3CA0886A92A9E5 /* Pods_ZARA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA6DB1C48483870C605EA8DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C09DB83B18CC98463070A0E /* Pods-ZARA.debug.xcconfig */,
+				01B96CC55F323BF03A53C457 /* Pods-ZARA.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F237F852255F9C8200527BBA = {
 			isa = PBXGroup;
 			children = (
 				F237F85D255F9C8200527BBA /* ZARA */,
 				F237F85C255F9C8200527BBA /* Products */,
+				BA6DB1C48483870C605EA8DF /* Pods */,
+				16C070BDC1478B2216B65234 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F237F86F255F9C8300527BBA /* Build configuration list for PBXNativeTarget "ZARA" */;
 			buildPhases = (
+				155E5ECC95311A1972E19956 /* [CP] Check Pods Manifest.lock */,
 				F237F857255F9C8200527BBA /* Sources */,
 				F237F858255F9C8200527BBA /* Frameworks */,
 				F237F859255F9C8200527BBA /* Resources */,
+				606C1858CAAA7D62D0FC7B15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		155E5ECC95311A1972E19956 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZARA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		606C1858CAAA7D62D0FC7B15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZARA/Pods-ZARA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZARA/Pods-ZARA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZARA/Pods-ZARA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F237F857255F9C8200527BBA /* Sources */ = {
@@ -295,6 +364,7 @@
 		};
 		F237F870255F9C8300527BBA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C09DB83B18CC98463070A0E /* Pods-ZARA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +384,7 @@
 		};
 		F237F871255F9C8300527BBA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01B96CC55F323BF03A53C457 /* Pods-ZARA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
