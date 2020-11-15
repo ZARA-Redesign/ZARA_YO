@@ -112,7 +112,7 @@ extension HwanghoMainVC : UICollectionViewDelegateFlowLayout{
     // cell 가로 세로
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if (indexPath.row+1)%3 == 0 {
-            return CGSize(width: collectionView.frame.size.width-28 , height: 400)
+            return CGSize(width: collectionView.frame.size.width-28 , height: 320)
         }else{
             return CGSize(width: (collectionView.frame.size.width/2)-28 , height: 320)
         }
