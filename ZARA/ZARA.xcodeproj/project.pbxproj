@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E61409D255FCF7300AE23D9 /* HwanghoMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */; };
+		0E6140A42560F69000AE23D9 /* HwanghoMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */; };
 		B5114FEA7FD04E86AE06EF91 /* Pods_ZARA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1E3F848C3CA0886A92A9E5 /* Pods_ZARA.framework */; };
 		F237F85F255F9C8200527BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F85E255F9C8200527BBA /* AppDelegate.swift */; };
 		F237F861255F9C8200527BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F860255F9C8200527BBA /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		01B96CC55F323BF03A53C457 /* Pods-ZARA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZARA.release.xcconfig"; path = "Target Support Files/Pods-ZARA/Pods-ZARA.release.xcconfig"; sourceTree = "<group>"; };
 		0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HwanghoMainVC.swift; path = Resource/HwanghoMainVC.swift; sourceTree = "<group>"; };
+		0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HwanghoMenuVC.swift; sourceTree = "<group>"; };
 		4C09DB83B18CC98463070A0E /* Pods-ZARA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZARA.debug.xcconfig"; path = "Target Support Files/Pods-ZARA/Pods-ZARA.debug.xcconfig"; sourceTree = "<group>"; };
 		F237F85B255F9C8200527BBA /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F237F85E255F9C8200527BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F237F879255F9E0300527BBA /* Hwangho.storyboard */,
+				0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */,
 				0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */,
 			);
 			path = Hwangho;
@@ -263,6 +266,7 @@
 				0E61409D255FCF7300AE23D9 /* HwanghoMainVC.swift in Sources */,
 				F237F863255F9C8200527BBA /* ViewController.swift in Sources */,
 				F237F85F255F9C8200527BBA /* AppDelegate.swift in Sources */,
+				0E6140A42560F69000AE23D9 /* HwanghoMenuVC.swift in Sources */,
 				F237F861255F9C8200527BBA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
