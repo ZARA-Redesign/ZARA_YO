@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E37357A2562996E00707A03 /* HwanghoMainCVHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3735792562996E00707A03 /* HwanghoMainCVHeaderCell.swift */; };
+		0E373582256299D800707A03 /* information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E373581256299D800707A03 /* information.swift */; };
+		0E37358525629A0A00707A03 /* HwanghoMainCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37358425629A0A00707A03 /* HwanghoMainCVCell.swift */; };
 		0E61409D255FCF7300AE23D9 /* HwanghoMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */; };
 		0E6140A42560F69000AE23D9 /* HwanghoMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */; };
 		B5114FEA7FD04E86AE06EF91 /* Pods_ZARA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1E3F848C3CA0886A92A9E5 /* Pods_ZARA.framework */; };
@@ -23,7 +26,10 @@
 
 /* Begin PBXFileReference section */
 		01B96CC55F323BF03A53C457 /* Pods-ZARA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZARA.release.xcconfig"; path = "Target Support Files/Pods-ZARA/Pods-ZARA.release.xcconfig"; sourceTree = "<group>"; };
-		0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HwanghoMainVC.swift; path = Resource/HwanghoMainVC.swift; sourceTree = "<group>"; };
+		0E3735792562996E00707A03 /* HwanghoMainCVHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HwanghoMainCVHeaderCell.swift; sourceTree = "<group>"; };
+		0E373581256299D800707A03 /* information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = information.swift; sourceTree = "<group>"; };
+		0E37358425629A0A00707A03 /* HwanghoMainCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HwanghoMainCVCell.swift; sourceTree = "<group>"; };
+		0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HwanghoMainVC.swift; sourceTree = "<group>"; };
 		0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HwanghoMenuVC.swift; sourceTree = "<group>"; };
 		4C09DB83B18CC98463070A0E /* Pods-ZARA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZARA.debug.xcconfig"; path = "Target Support Files/Pods-ZARA/Pods-ZARA.debug.xcconfig"; sourceTree = "<group>"; };
 		F237F85B255F9C8200527BBA /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +58,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E373574256298E400707A03 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F237F879255F9E0300527BBA /* Hwangho.storyboard */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		0E373575256298F000707A03 /* ReSources */ = {
+			isa = PBXGroup;
+			children = (
+				0E3735762562990000707A03 /* VCs */,
+				0E3735772562990900707A03 /* Cells */,
+				0E3735782562990F00707A03 /* Informations */,
+			);
+			path = ReSources;
+			sourceTree = "<group>";
+		};
+		0E3735762562990000707A03 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */,
+				0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		0E3735772562990900707A03 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0E3735792562996E00707A03 /* HwanghoMainCVHeaderCell.swift */,
+				0E37358425629A0A00707A03 /* HwanghoMainCVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0E3735782562990F00707A03 /* Informations */ = {
+			isa = PBXGroup;
+			children = (
+				0E373581256299D800707A03 /* information.swift */,
+			);
+			path = Informations;
+			sourceTree = "<group>";
+		};
 		16C070BDC1478B2216B65234 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,9 +170,8 @@
 		F2C502CC255FC78A008432F7 /* Hwangho */ = {
 			isa = PBXGroup;
 			children = (
-				F237F879255F9E0300527BBA /* Hwangho.storyboard */,
-				0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */,
-				0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */,
+				0E373574256298E400707A03 /* Sources */,
+				0E373575256298F000707A03 /* ReSources */,
 			);
 			path = Hwangho;
 			sourceTree = "<group>";
@@ -266,6 +315,9 @@
 				0E61409D255FCF7300AE23D9 /* HwanghoMainVC.swift in Sources */,
 				F237F863255F9C8200527BBA /* ViewController.swift in Sources */,
 				F237F85F255F9C8200527BBA /* AppDelegate.swift in Sources */,
+				0E373582256299D800707A03 /* information.swift in Sources */,
+				0E37358525629A0A00707A03 /* HwanghoMainCVCell.swift in Sources */,
+				0E37357A2562996E00707A03 /* HwanghoMainCVHeaderCell.swift in Sources */,
 				0E6140A42560F69000AE23D9 /* HwanghoMenuVC.swift in Sources */,
 				F237F861255F9C8200527BBA /* SceneDelegate.swift in Sources */,
 			);
