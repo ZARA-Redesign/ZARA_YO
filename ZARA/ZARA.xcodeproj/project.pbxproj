@@ -10,13 +10,18 @@
 		B5114FEA7FD04E86AE06EF91 /* Pods_ZARA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1E3F848C3CA0886A92A9E5 /* Pods_ZARA.framework */; };
 		F237F85F255F9C8200527BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F85E255F9C8200527BBA /* AppDelegate.swift */; };
 		F237F861255F9C8200527BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F860255F9C8200527BBA /* SceneDelegate.swift */; };
-		F237F863255F9C8200527BBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F862255F9C8200527BBA /* ViewController.swift */; };
+		F237F863255F9C8200527BBA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F862255F9C8200527BBA /* MainVC.swift */; };
 		F237F866255F9C8200527BBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F237F864255F9C8200527BBA /* Main.storyboard */; };
 		F237F868255F9C8300527BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F237F867255F9C8300527BBA /* Assets.xcassets */; };
 		F237F86B255F9C8300527BBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F237F869255F9C8300527BBA /* LaunchScreen.storyboard */; };
 		F237F874255F9D7100527BBA /* Yoonjin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F237F873255F9D7100527BBA /* Yoonjin.storyboard */; };
 		F237F877255F9DF900527BBA /* Seohyun.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F237F876255F9DF900527BBA /* Seohyun.storyboard */; };
 		F237F87A255F9E0300527BBA /* Hwangho.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F237F879255F9E0300527BBA /* Hwangho.storyboard */; };
+		F2C397622570A62500CBB190 /* ClothesCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C397612570A62500CBB190 /* ClothesCVCell.swift */; };
+		F2C397652570A6F400CBB190 /* ClothesCVHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C397642570A6F400CBB190 /* ClothesCVHeader.swift */; };
+		F2F71305255FCF5800EAEA1A /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F71304255FCF5800EAEA1A /* MenuVC.swift */; };
+		F2F783532570CD85005E4B76 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F783522570CD85005E4B76 /* MainNavVC.swift */; };
+		F2F783562570DFBE005E4B76 /* MenuTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F783552570DFBE005E4B76 /* MenuTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +30,7 @@
 		F237F85B255F9C8200527BBA /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F237F85E255F9C8200527BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F237F860255F9C8200527BBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F237F862255F9C8200527BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F237F862255F9C8200527BBA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		F237F865255F9C8200527BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F237F867255F9C8300527BBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F237F86A255F9C8300527BBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,6 +38,11 @@
 		F237F873255F9D7100527BBA /* Yoonjin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Yoonjin.storyboard; sourceTree = "<group>"; };
 		F237F876255F9DF900527BBA /* Seohyun.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Seohyun.storyboard; sourceTree = "<group>"; };
 		F237F879255F9E0300527BBA /* Hwangho.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hwangho.storyboard; sourceTree = "<group>"; };
+		F2C397612570A62500CBB190 /* ClothesCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesCVCell.swift; sourceTree = "<group>"; };
+		F2C397642570A6F400CBB190 /* ClothesCVHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesCVHeader.swift; sourceTree = "<group>"; };
+		F2F71304255FCF5800EAEA1A /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		F2F783522570CD85005E4B76 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
+		F2F783552570DFBE005E4B76 /* MenuTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTVCell.swift; sourceTree = "<group>"; };
 		FA1E3F848C3CA0886A92A9E5 /* Pods_ZARA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZARA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,6 +73,15 @@
 				01B96CC55F323BF03A53C457 /* Pods-ZARA.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F22BCBA12570B428005C2015 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F237F862255F9C8200527BBA /* MainVC.swift */,
+				F2F783522570CD85005E4B76 /* MainNavVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		F237F852255F9C8200527BBA = {
@@ -96,10 +115,28 @@
 			path = ZARA;
 			sourceTree = "<group>";
 		};
+		F2C397672570A6FD00CBB190 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F2C397612570A62500CBB190 /* ClothesCVCell.swift */,
+				F2C397642570A6F400CBB190 /* ClothesCVHeader.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F2C397682570A70400CBB190 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F2F71304255FCF5800EAEA1A /* MenuVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		F2C502C9255FC73D008432F7 /* Yoonjin */ = {
 			isa = PBXGroup;
 			children = (
-				F237F862255F9C8200527BBA /* ViewController.swift */,
+				F2F71307255FCF6F00EAEA1A /* Main */,
+				F2F71309255FCF7600EAEA1A /* Menu */,
 				F237F873255F9D7100527BBA /* Yoonjin.storyboard */,
 			);
 			path = Yoonjin;
@@ -138,6 +175,32 @@
 				F237F86C255F9C8300527BBA /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2F71307255FCF6F00EAEA1A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F22BCBA12570B428005C2015 /* ViewControllers */,
+				F2C397672570A6FD00CBB190 /* Cells */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F2F71309255FCF7600EAEA1A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F2C397682570A70400CBB190 /* ViewControllers */,
+				F2F783582570DFC2005E4B76 /* Cells */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		F2F783582570DFC2005E4B76 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F2F783552570DFBE005E4B76 /* MenuTVCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,9 +320,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F237F863255F9C8200527BBA /* ViewController.swift in Sources */,
+				F237F863255F9C8200527BBA /* MainVC.swift in Sources */,
+				F2F71305255FCF5800EAEA1A /* MenuVC.swift in Sources */,
+				F2F783562570DFBE005E4B76 /* MenuTVCell.swift in Sources */,
+				F2F783532570CD85005E4B76 /* MainNavVC.swift in Sources */,
 				F237F85F255F9C8200527BBA /* AppDelegate.swift in Sources */,
 				F237F861255F9C8200527BBA /* SceneDelegate.swift in Sources */,
+				F2C397652570A6F400CBB190 /* ClothesCVHeader.swift in Sources */,
+				F2C397622570A62500CBB190 /* ClothesCVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
