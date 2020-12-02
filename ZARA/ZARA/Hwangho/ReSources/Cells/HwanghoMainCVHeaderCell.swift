@@ -35,23 +35,30 @@ class HwanghoMainCVHeaderCell : UICollectionReusableView{
     @objc func viewAllPressBtn(_ sender : UIButton) {
         filters = 0
         print("viewAllPressBtn 눌렀음 \(filters)")
-        
-//        NotificationCenter.default.post(name: .init("viewAllPressBtn"), object: nil, userInfo: ["filter":filters])
+        NotificationCenter.default.post(name: .init("viewAllPressBtn"), object: nil, userInfo: ["filter":filters])
     }
+    
     @objc func coatPressBtn() {
         filters = 1
         print("coatPressBtn 눌렀음 \(filters)")
+        NotificationCenter.default.post(name: .init("coatPressBtn"), object: nil, userInfo: ["filter":filters])
     }
+    
     @objc func puffersPressBtn() {
         filters = 2
         print("puffersPressBtn 눌렀음 \(filters)")
+        NotificationCenter.default.post(name: .init("puffersPressBtn"), object: nil, userInfo: ["filter":filters])
     }
+    
     @objc func waistCoatsPressBtn() {
         filters = 3
         print("waistCoatsPressBtn 눌렀음 \(filters)")
+        NotificationCenter.default.post(name: .init("waistCoatsPressBtn"), object: nil, userInfo: ["filter":filters])
     }
+    
     @objc func trenchCoatPressBtn() {
         filters = 4
         print("trenchCoatPressBtn 눌렀음 \(filters)")
+        NotificationCenter.default.post(name: .init("trenchCoatPressBtn"), object: nil, userInfo: ["filter":filters])
     }
 }
