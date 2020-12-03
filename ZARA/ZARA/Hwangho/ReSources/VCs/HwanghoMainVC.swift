@@ -11,24 +11,14 @@ class HwanghoMainVC: UIViewController {
 
     @IBOutlet weak var zaraCollectionView: UICollectionView!
     
-    var informations : [information] = []
-    var newInformations : [information] = []
+    var informations : [information] = []       // 젠체 data 받아오는 곳
+    var newInformations : [information] = []    // filter로 데이터 수정
 
     var filter = 0      // 0일 때는 전체 다 보여저야 함
     var count : Int?
     
     override func viewWillAppear(_ animated: Bool) {
-        // filter = 0
-        NotificationCenter.default.addObserver(self, selector: #selector(viewAllPressBtn), name: .init("viewAllPressBtn"), object: nil)
-        // filter = 1
-        NotificationCenter.default.addObserver(self, selector: #selector(coatPressBtn), name: .init("coatPressBtn"), object: nil)
-        // filter = 2
-        NotificationCenter.default.addObserver(self, selector: #selector(puffersPressBtn), name: .init("puffersPressBtn"), object: nil)
-        // filter = 3
-        NotificationCenter.default.addObserver(self, selector: #selector(waistCoatsPressBtn), name: .init("waistCoatsPressBtn"), object: nil)
-        // filter = 4
-        NotificationCenter.default.addObserver(self, selector: #selector(trenchCoatPressBtn), name: .init("trenchCoatPressBtn"), object: nil)
-        
+        setNotifi()
         setinformations()
     }
     
@@ -39,6 +29,21 @@ class HwanghoMainVC: UIViewController {
         zaraCollectionView.dataSource = self
         zaraCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
+    
+    // Notification addObserver 관련 코드
+    func setNotifi(){
+        // filter = 0
+        NotificationCenter.default.addObserver(self, selector: #selector(viewAllPressBtn), name: .init("viewAllPressBtn"), object: nil)
+        // filter = 1
+        NotificationCenter.default.addObserver(self, selector: #selector(coatPressBtn), name: .init("coatPressBtn"), object: nil)
+        // filter = 2
+        NotificationCenter.default.addObserver(self, selector: #selector(puffersPressBtn), name: .init("puffersPressBtn"), object: nil)
+        // filter = 3
+        NotificationCenter.default.addObserver(self, selector: #selector(waistCoatsPressBtn), name: .init("waistCoatsPressBtn"), object: nil)
+        // filter = 4
+        NotificationCenter.default.addObserver(self, selector: #selector(trenchCoatPressBtn), name: .init("trenchCoatPressBtn"), object: nil)
+    }
+    
     // filter == 0
     @objc func viewAllPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
