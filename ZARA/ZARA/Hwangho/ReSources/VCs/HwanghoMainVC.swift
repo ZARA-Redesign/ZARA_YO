@@ -12,6 +12,7 @@ class HwanghoMainVC: UIViewController {
     @IBOutlet weak var zaraCollectionView: UICollectionView!
     
     var informations : [information] = []
+    var newInformations : [information] = []
 
     var filter = 0      // 0일 때는 전체 다 보여저야 함
     var count : Int?
@@ -28,7 +29,6 @@ class HwanghoMainVC: UIViewController {
         // filter = 4
         NotificationCenter.default.addObserver(self, selector: #selector(trenchCoatPressBtn), name: .init("trenchCoatPressBtn"), object: nil)
         
-        
         setinformations()
     }
     
@@ -44,7 +44,9 @@ class HwanghoMainVC: UIViewController {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
         guard let fil = userinfo["filter"] as? Int else {return }
         self.filter = fil
-        print("---> filter 받아옴 \(filter)")
+//        print("---> filter 받아옴 \(filter)")
+        newInformations = []
+        newInformations = informations
         zaraCollectionView.reloadData()
     }
     // filter == 1
@@ -52,7 +54,9 @@ class HwanghoMainVC: UIViewController {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
         guard let fil = userinfo["filter"] as? Int else {return }
         self.filter = fil
-        print("---> filter 받아옴 \(filter)")
+//        print("---> filter 받아옴 \(filter)")
+        newInformations = []
+        newInformations = informations.filter{ return $0.filter == filter }
         zaraCollectionView.reloadData()
     }
     // filter == 2
@@ -60,7 +64,9 @@ class HwanghoMainVC: UIViewController {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
         guard let fil = userinfo["filter"] as? Int else {return }
         self.filter = fil
-        print("---> filter 받아옴 \(filter)")
+//        print("---> filter 받아옴 \(filter)")
+        newInformations = []
+        newInformations = informations.filter{ return $0.filter == filter }
         zaraCollectionView.reloadData()
     }
     // filter == 3
@@ -68,7 +74,9 @@ class HwanghoMainVC: UIViewController {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
         guard let fil = userinfo["filter"] as? Int else {return }
         self.filter = fil
-        print("---> filter 받아옴 \(filter)")
+//        print("---> filter 받아옴 \(filter)")
+        newInformations = []
+        newInformations = informations.filter{ return $0.filter == filter }
         zaraCollectionView.reloadData()
     }
     // filter == 4
@@ -76,7 +84,9 @@ class HwanghoMainVC: UIViewController {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
         guard let fil = userinfo["filter"] as? Int else {return }
         self.filter = fil
-        print("---> filter 받아옴 \(filter)")
+//        print("---> filter 받아옴 \(filter)")
+        newInformations = []
+        newInformations = informations.filter{ return $0.filter == filter }
         zaraCollectionView.reloadData()
     }
     
@@ -89,7 +99,7 @@ class HwanghoMainVC: UIViewController {
         let data6 = information(image: "rectangle9", product: "NEW", name: "CONTRAST PUFFER JACKET", originalPrice: 52900, salePrice: 45200 , filter: 4)
 
         informations = [data1,data2,data3,data4,data5, data6]
-
+        newInformations = informations
     }
     
     // MENU 버튼
@@ -106,18 +116,7 @@ class HwanghoMainVC: UIViewController {
 extension HwanghoMainVC : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-
-        if filter == 1 {
-            return 2
-        } else if filter == 2{
-            return 2
-        }else if filter == 3{
-            return 1
-        }else if filter == 4{
-            return 1
-        }else {
-            return informations.count
-        }
+        return newInformations.count
     }
     
     // Header Cell 집어 넣기
@@ -131,7 +130,7 @@ extension HwanghoMainVC : UICollectionViewDataSource{
         // 전체 페이지
         guard let cell1 = zaraCollectionView.dequeueReusableCell(withReuseIdentifier: HwanghoMainCVCell.identifier, for: indexPath) as? HwanghoMainCVCell else {return UICollectionViewCell() }
 
-            cell1.setInformation(image: informations[indexPath.row].image, product: informations[indexPath.row].product, name: informations[indexPath.row].name, originalPrice: informations[indexPath.row].originalPrice, salePrice: informations[indexPath.row].salePrice, filter: informations[indexPath.row].filter)
+            cell1.setInformation(image: newInformations[indexPath.row].image, product: newInformations[indexPath.row].product, name: newInformations[indexPath.row].name, originalPrice: newInformations[indexPath.row].originalPrice, salePrice: newInformations[indexPath.row].salePrice, filter: newInformations[indexPath.row].filter)
      
             return cell1
     }
