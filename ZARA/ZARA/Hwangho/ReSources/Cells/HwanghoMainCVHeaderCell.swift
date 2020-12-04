@@ -25,6 +25,7 @@ class HwanghoMainCVHeaderCell : UICollectionReusableView{
         viewAllBtn.setTitleColor(.red, for: .normal)
         BtnAction()
     }
+    
     func BtnAction(){
         viewAllBtn.addTarget(self, action:  #selector(viewAllPressBtn), for: .touchUpInside)
         coatBtn.addTarget(self, action:  #selector(coatPressBtn), for: .touchUpInside)
