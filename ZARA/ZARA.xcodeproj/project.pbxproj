@@ -12,6 +12,12 @@
 		0E37358525629A0A00707A03 /* HwanghoMainCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E37358425629A0A00707A03 /* HwanghoMainCVCell.swift */; };
 		0E61409D255FCF7300AE23D9 /* HwanghoMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */; };
 		0E6140A42560F69000AE23D9 /* HwanghoMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */; };
+		922481742577E0800044AF1C /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922481732577E0800044AF1C /* mainVC.swift */; };
+		92C9629E257A1CB70064743D /* menuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C9629D257A1CB70064743D /* menuVC.swift */; };
+		92C962BA257A342D0064743D /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C962B9257A342D0064743D /* HeaderCell.swift */; };
+		92C962BE257A34BF0064743D /* ItemCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C962BD257A34BF0064743D /* ItemCell1.swift */; };
+		92C962C1257A34F50064743D /* ItemCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C962C0257A34F50064743D /* ItemCell2.swift */; };
+		92C962C4257A3A9F0064743D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C962C3257A3A9F0064743D /* Product.swift */; };
 		B5114FEA7FD04E86AE06EF91 /* Pods_ZARA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1E3F848C3CA0886A92A9E5 /* Pods_ZARA.framework */; };
 		F237F85F255F9C8200527BBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F85E255F9C8200527BBA /* AppDelegate.swift */; };
 		F237F861255F9C8200527BBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237F860255F9C8200527BBA /* SceneDelegate.swift */; };
@@ -37,6 +43,12 @@
 		0E61409C255FCF7300AE23D9 /* HwanghoMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HwanghoMainVC.swift; sourceTree = "<group>"; };
 		0E6140A32560F69000AE23D9 /* HwanghoMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HwanghoMenuVC.swift; sourceTree = "<group>"; };
 		4C09DB83B18CC98463070A0E /* Pods-ZARA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZARA.debug.xcconfig"; path = "Target Support Files/Pods-ZARA/Pods-ZARA.debug.xcconfig"; sourceTree = "<group>"; };
+		922481732577E0800044AF1C /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
+		92C9629D257A1CB70064743D /* menuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuVC.swift; sourceTree = "<group>"; };
+		92C962B9257A342D0064743D /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		92C962BD257A34BF0064743D /* ItemCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell1.swift; sourceTree = "<group>"; };
+		92C962C0257A34F50064743D /* ItemCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell2.swift; sourceTree = "<group>"; };
+		92C962C3257A3A9F0064743D /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		F237F85B255F9C8200527BBA /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F237F85E255F9C8200527BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F237F860255F9C8200527BBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +132,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9224816B2577873A0044AF1C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				92C9629D257A1CB70064743D /* menuVC.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		9224816D2577DF780044AF1C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				922481732577E0800044AF1C /* mainVC.swift */,
+				92C962C3257A3A9F0064743D /* Product.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		92C962B8257A341C0064743D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				92C962B9257A342D0064743D /* HeaderCell.swift */,
+				92C962BD257A34BF0064743D /* ItemCell1.swift */,
+				92C962C0257A34F50064743D /* ItemCell2.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		BA6DB1C48483870C605EA8DF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +238,9 @@
 		F2C502CB255FC783008432F7 /* Seohyun */ = {
 			isa = PBXGroup;
 			children = (
+				92C962B8257A341C0064743D /* Cell */,
+				9224816D2577DF780044AF1C /* Main */,
+				9224816B2577873A0044AF1C /* Menu */,
 				F237F876255F9DF900527BBA /* Seohyun.storyboard */,
 			);
 			path = Seohyun;
@@ -375,15 +417,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				0E61409D255FCF7300AE23D9 /* HwanghoMainVC.swift in Sources */,
-				F237F863255F9C8200527BBA /* ViewController.swift in Sources */,
-
+				F237F863255F9C8200527BBA /* MainVC.swift in Sources */,
+				92C962BE257A34BF0064743D /* ItemCell1.swift in Sources */,
+				922481742577E0800044AF1C /* mainVC.swift in Sources */,
 				F237F863255F9C8200527BBA /* MainVC.swift in Sources */,
 				F2F71305255FCF5800EAEA1A /* MenuVC.swift in Sources */,
+				92C9629E257A1CB70064743D /* menuVC.swift in Sources */,
 				F2F783562570DFBE005E4B76 /* MenuTVCell.swift in Sources */,
 				F2F783532570CD85005E4B76 /* MainNavVC.swift in Sources */,
-
 				F237F85F255F9C8200527BBA /* AppDelegate.swift in Sources */,
 				0E373582256299D800707A03 /* information.swift in Sources */,
 				0E37358525629A0A00707A03 /* HwanghoMainCVCell.swift in Sources */,
@@ -391,6 +433,9 @@
 				0E6140A42560F69000AE23D9 /* HwanghoMenuVC.swift in Sources */,
 				F237F861255F9C8200527BBA /* SceneDelegate.swift in Sources */,
 				F2C397652570A6F400CBB190 /* ClothesCVHeader.swift in Sources */,
+				92C962C1257A34F50064743D /* ItemCell2.swift in Sources */,
+				92C962C4257A3A9F0064743D /* Product.swift in Sources */,
+				92C962BA257A342D0064743D /* HeaderCell.swift in Sources */,
 				F2C397622570A62500CBB190 /* ClothesCVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
