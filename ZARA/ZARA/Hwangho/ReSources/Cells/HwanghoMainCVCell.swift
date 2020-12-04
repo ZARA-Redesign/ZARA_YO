@@ -20,7 +20,6 @@ class HwanghoMainCVCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         // filter == 0
         NotificationCenter.default.addObserver(self, selector: #selector(viewAllPressBtn), name: .init("viewAllPressBtn"), object: nil)
         // filter == 1

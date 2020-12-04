@@ -47,8 +47,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 0
     @objc func viewAllPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations
@@ -57,8 +57,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 1
     @objc func coatPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations.filter{ return $0.filter == filter }
@@ -67,8 +67,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 2
     @objc func puffersPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations.filter{ return $0.filter == filter }
@@ -77,8 +77,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 3
     @objc func waistCoatsPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations.filter{ return $0.filter == filter }
@@ -87,8 +87,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 4
     @objc func trenchCoatPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations.filter{ return $0.filter == filter }
@@ -138,6 +138,18 @@ extension HwanghoMainVC : UICollectionViewDataSource{
             cell1.setInformation(image: newInformations[indexPath.row].image, product: newInformations[indexPath.row].product, name: newInformations[indexPath.row].name, originalPrice: newInformations[indexPath.row].originalPrice, salePrice: newInformations[indexPath.row].salePrice, filter: newInformations[indexPath.row].filter)
      
             return cell1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.transform = CGAffineTransform(translationX: 50, y: 0)
+               cell.alpha = 0
+               UIView.animate(
+                   withDuration: 0.5,
+                   delay: 0.15 * Double(indexPath.row),
+                   options: [.curveEaseInOut],
+                   animations: {
+                       cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                       cell.alpha = 1 } )
     }
 }
 
