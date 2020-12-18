@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HwanghoMainCVCell: UICollectionViewCell {
     static let identifier = "HwanghoMainCVCell"
@@ -17,6 +18,10 @@ class HwanghoMainCVCell: UICollectionViewCell {
     @IBOutlet weak var salePriceTx: UILabel!
 
     var filter = 0
+    var sale: Bool?
+    var percent  = 0
+    var discountedPrice = 0
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -67,13 +72,21 @@ class HwanghoMainCVCell: UICollectionViewCell {
 //        print("---> filter 받아옴 \(filter)")
     }
     
-    func setInformation(image: String, product: String, name: String, originalPrice : Int, salePrice: Int, filter: Int){
-
-            print("filter 값은?? \(self.filter)")
-            self.dressImg.image = UIImage(named: image)
-            self.productTx.text = product
-            self.nameTx.text = name
-            self.orginPriceTx.text = "\(originalPrice)"
-            self.salePriceTx.text = "\(salePrice)"
+    func setInformation(imgUrl: String, name: String, originPrice : Int, isSale: Bool, percent: Int, discountedPrice: Int){
+        
+        print("filter 값은?? \(self.filter)")
+        let url = URL(string: imgUrl)
+        self.dressImg.kf.setImage(with: url)
+        self.nameTx.text = name
+        self.orginPriceTx.text = "\(originPrice)"
+        self.percent = percent
+        self.discountedPrice = discountedPrice
+        if isSale == true{
+            self.productTx.text = "\(self.percent)% OFF"
+            self.salePriceTx.text = "\(self.discountedPrice)"
+        } else{
+            self.productTx.text = "NEW"
+            self.salePriceTx.text = " "
+        }        
     }
 }

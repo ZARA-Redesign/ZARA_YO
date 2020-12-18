@@ -10,24 +10,45 @@ import UIKit
 class HwanghoMainVC: UIViewController {
 
     @IBOutlet weak var zaraCollectionView: UICollectionView!
-    
-    var informations : [information] = []       // 젠체 data 받아오는 곳
-    var newInformations : [information] = []    // filter로 데이터 수정
 
+    var zaraInformations : GenericResponse<[ZaraInformation]>?
+    var newZaraInformations : GenericResponse<[ZaraInformation]>?
+    
     var filter = 0      // 0일 때는 전체 다 보여저야 함
     var count : Int?
     
     override func viewWillAppear(_ animated: Bool) {
         setNotifi()
-        setinformations()
+//        setinformations()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getFirstServerData()
         zaraCollectionView.delegate = self
         zaraCollectionView.dataSource = self
         zaraCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+    }
+    
+    func getFirstServerData(){
+        ZaraHomeService.share.zaraHomeget {(NetworkResult) -> (Void) in
+            switch NetworkResult{
+            case .success(let data):
+                guard let dt = data as? GenericResponse<[ZaraInformation]> else {return}
+                self.zaraInformations = dt
+                self.zaraCollectionView.reloadData()
+                
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // Notification addObserver 관련 코드
@@ -50,9 +71,24 @@ class HwanghoMainVC: UIViewController {
         guard let filtering = userinfo["filter"] as? Int else {return }
         self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
-        newInformations = []
-        newInformations = informations
-        zaraCollectionView.reloadData()
+        ZaraHomeService.share.zaraHomeget {(NetworkResult) -> (Void) in
+            switch NetworkResult{
+            case .success(let data):
+                guard let dt = data as? GenericResponse<[ZaraInformation]> else {return}
+                self.zaraInformations = dt
+                self.zaraCollectionView.reloadData()
+                
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     // filter == 1
     @objc func coatPressBtn( _ notification: Notification) {
@@ -60,8 +96,24 @@ class HwanghoMainVC: UIViewController {
         guard let filtering = userinfo["filter"] as? Int else {return }
         self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
-        newInformations = []
-        newInformations = informations.filter{ return $0.filter == filter }
+        zaraHomeCoatService.share.zaraHomeCoatget {(NetworkResult) -> (Void) in
+            switch NetworkResult{
+            case .success(let data):
+                guard let dt = data as? GenericResponse<[ZaraInformation]> else {return}
+                self.zaraInformations = dt
+                self.zaraCollectionView.reloadData()
+                
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
         zaraCollectionView.reloadData()
     }
     // filter == 2
@@ -70,8 +122,24 @@ class HwanghoMainVC: UIViewController {
         guard let filtering = userinfo["filter"] as? Int else {return }
         self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
-        newInformations = []
-        newInformations = informations.filter{ return $0.filter == filter }
+        zaraHomepuffersService.share.zaraHomePuffersget {(NetworkResult) -> (Void) in
+            switch NetworkResult{
+            case .success(let data):
+                guard let dt = data as? GenericResponse<[ZaraInformation]> else {return}
+                self.zaraInformations = dt
+                self.zaraCollectionView.reloadData()
+                
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
         zaraCollectionView.reloadData()
     }
     // filter == 3
@@ -80,8 +148,24 @@ class HwanghoMainVC: UIViewController {
         guard let filtering = userinfo["filter"] as? Int else {return }
         self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
-        newInformations = []
-        newInformations = informations.filter{ return $0.filter == filter }
+        zaraHomeWaistCoatService.share.zaraHomeCoatget{(NetworkResult) -> (Void) in
+            switch NetworkResult{
+            case .success(let data):
+                guard let dt = data as? GenericResponse<[ZaraInformation]> else {return}
+                self.zaraInformations = dt
+                self.zaraCollectionView.reloadData()
+                
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
         zaraCollectionView.reloadData()
     }
     // filter == 4
@@ -90,21 +174,25 @@ class HwanghoMainVC: UIViewController {
         guard let filtering = userinfo["filter"] as? Int else {return }
         self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
-        newInformations = []
-        newInformations = informations.filter{ return $0.filter == filter }
+        zaraHomeTrenchCoatService.share.zaraHomeCoatget{(NetworkResult) -> (Void) in
+            switch NetworkResult{
+            case .success(let data):
+                guard let dt = data as? GenericResponse<[ZaraInformation]> else {return}
+                self.zaraInformations = dt
+                self.zaraCollectionView.reloadData()
+                
+            case .requestErr:
+                print("requestErr")
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
         zaraCollectionView.reloadData()
-    }
-    
-    func setinformations(){
-        let data1 = information(image: "proImg2", product: "NEW", name: "WOOL BLEND COAT WITH BELT", originalPrice: 4000, salePrice: 30000 , filter: 1)
-        let data2 = information(image: "proImg2", product: "40% OFF", name: "FAUX SHEARLINF COAT", originalPrice: 234000, salePrice: 20000 , filter: 1)
-        let data3 = information(image: "proImg2", product: "NEW", name: "CONTRAST PUFFER JACKET", originalPrice: 23400, salePrice: 12400 , filter: 2)
-        let data4 = information(image: "proImg2", product: "30% OFF", name: "WOOL BLEND COAT WITH BELT", originalPrice: 53200, salePrice: 39000 , filter: 2)
-        let data5 = information(image: "proImg2", product: "NEW", name: "FAUX SHEARLINF COAT", originalPrice: 42100, salePrice: 23100 , filter: 3)
-        let data6 = information(image: "rectangle9", product: "NEW", name: "CONTRAST PUFFER JACKET", originalPrice: 52900, salePrice: 45200 , filter: 4)
-
-        informations = [data1,data2,data3,data4,data5, data6]
-        newInformations = informations
     }
     
     // MENU 버튼
@@ -120,8 +208,9 @@ class HwanghoMainVC: UIViewController {
 
 extension HwanghoMainVC : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("총 개수는 \(zaraInformations?.data?.count ?? 0)")
         
-        return newInformations.count
+        return zaraInformations?.data?.count ?? 0
     }
     
     // Header Cell 집어 넣기
@@ -135,8 +224,9 @@ extension HwanghoMainVC : UICollectionViewDataSource{
         // 전체 페이지
         guard let cell1 = zaraCollectionView.dequeueReusableCell(withReuseIdentifier: HwanghoMainCVCell.identifier, for: indexPath) as? HwanghoMainCVCell else {return UICollectionViewCell() }
 
-            cell1.setInformation(image: newInformations[indexPath.row].image, product: newInformations[indexPath.row].product, name: newInformations[indexPath.row].name, originalPrice: newInformations[indexPath.row].originalPrice, salePrice: newInformations[indexPath.row].salePrice, filter: newInformations[indexPath.row].filter)
-     
+        if let readings = zaraInformations?.data?[indexPath.row] {
+            cell1.setInformation(imgUrl: readings.imgURL, name: readings.name, originPrice: readings.originPrice, isSale: readings.isSale, percent: readings.sale.percent, discountedPrice: readings.sale.discountedPrice)
+        }
             return cell1
     }
     
@@ -145,7 +235,7 @@ extension HwanghoMainVC : UICollectionViewDataSource{
                cell.alpha = 0
                UIView.animate(
                    withDuration: 0.5,
-                   delay: 0.15 * Double(indexPath.row),
+                   delay: 0,
                    options: [.curveEaseInOut],
                    animations: {
                        cell.transform = CGAffineTransform(translationX: 0, y: 0)
