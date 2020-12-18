@@ -11,24 +11,14 @@ class HwanghoMainVC: UIViewController {
 
     @IBOutlet weak var zaraCollectionView: UICollectionView!
     
-    var informations : [information] = []
-    var newInformations : [information] = []
+    var informations : [information] = []       // 젠체 data 받아오는 곳
+    var newInformations : [information] = []    // filter로 데이터 수정
 
     var filter = 0      // 0일 때는 전체 다 보여저야 함
     var count : Int?
     
     override func viewWillAppear(_ animated: Bool) {
-        // filter = 0
-        NotificationCenter.default.addObserver(self, selector: #selector(viewAllPressBtn), name: .init("viewAllPressBtn"), object: nil)
-        // filter = 1
-        NotificationCenter.default.addObserver(self, selector: #selector(coatPressBtn), name: .init("coatPressBtn"), object: nil)
-        // filter = 2
-        NotificationCenter.default.addObserver(self, selector: #selector(puffersPressBtn), name: .init("puffersPressBtn"), object: nil)
-        // filter = 3
-        NotificationCenter.default.addObserver(self, selector: #selector(waistCoatsPressBtn), name: .init("waistCoatsPressBtn"), object: nil)
-        // filter = 4
-        NotificationCenter.default.addObserver(self, selector: #selector(trenchCoatPressBtn), name: .init("trenchCoatPressBtn"), object: nil)
-        
+        setNotifi()
         setinformations()
     }
     
@@ -39,11 +29,26 @@ class HwanghoMainVC: UIViewController {
         zaraCollectionView.dataSource = self
         zaraCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
+    
+    // Notification addObserver 관련 코드
+    func setNotifi(){
+        // filter = 0
+        NotificationCenter.default.addObserver(self, selector: #selector(viewAllPressBtn), name: .init("viewAllPressBtn"), object: nil)
+        // filter = 1
+        NotificationCenter.default.addObserver(self, selector: #selector(coatPressBtn), name: .init("coatPressBtn"), object: nil)
+        // filter = 2
+        NotificationCenter.default.addObserver(self, selector: #selector(puffersPressBtn), name: .init("puffersPressBtn"), object: nil)
+        // filter = 3
+        NotificationCenter.default.addObserver(self, selector: #selector(waistCoatsPressBtn), name: .init("waistCoatsPressBtn"), object: nil)
+        // filter = 4
+        NotificationCenter.default.addObserver(self, selector: #selector(trenchCoatPressBtn), name: .init("trenchCoatPressBtn"), object: nil)
+    }
+    
     // filter == 0
     @objc func viewAllPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations
@@ -52,8 +57,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 1
     @objc func coatPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations.filter{ return $0.filter == filter }
@@ -62,8 +67,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 2
     @objc func puffersPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations.filter{ return $0.filter == filter }
@@ -72,8 +77,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 3
     @objc func waistCoatsPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations.filter{ return $0.filter == filter }
@@ -82,8 +87,8 @@ class HwanghoMainVC: UIViewController {
     // filter == 4
     @objc func trenchCoatPressBtn( _ notification: Notification) {
         guard let userinfo = notification.userInfo as?[String:Any] else {return }
-        guard let fil = userinfo["filter"] as? Int else {return }
-        self.filter = fil
+        guard let filtering = userinfo["filter"] as? Int else {return }
+        self.filter = filtering
 //        print("---> filter 받아옴 \(filter)")
         newInformations = []
         newInformations = informations.filter{ return $0.filter == filter }
@@ -133,6 +138,18 @@ extension HwanghoMainVC : UICollectionViewDataSource{
             cell1.setInformation(image: newInformations[indexPath.row].image, product: newInformations[indexPath.row].product, name: newInformations[indexPath.row].name, originalPrice: newInformations[indexPath.row].originalPrice, salePrice: newInformations[indexPath.row].salePrice, filter: newInformations[indexPath.row].filter)
      
             return cell1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.transform = CGAffineTransform(translationX: 50, y: 0)
+               cell.alpha = 0
+               UIView.animate(
+                   withDuration: 0.5,
+                   delay: 0.15 * Double(indexPath.row),
+                   options: [.curveEaseInOut],
+                   animations: {
+                       cell.transform = CGAffineTransform(translationX: 0, y: 0)
+                       cell.alpha = 1 } )
     }
 }
 

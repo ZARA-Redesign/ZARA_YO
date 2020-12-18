@@ -28,7 +28,6 @@ class HwanghoMenuVC: UIViewController {
         super.viewDidLoad()
         manUnderBar.isHidden = true
         kidsUnderBar.isHidden = true
-
     }
     
     @IBAction func backPressBtn(_ sender: Any) {
@@ -63,13 +62,3 @@ class HwanghoMenuVC: UIViewController {
         kidsUnderBar.isHidden = false
     }
 }
-
-//
-//trenchCoatBtn.addTarget(self, action:  #selector(trenchCoatPressBtn), for: .touchUpInside)
-//}
-//
-//@objc func viewAllPressBtn() {
-//filters = 0
-//print("viewAllPressBtn 눌렀음 \(filters)")
-//NotificationCenter.default.post(name: .init("viewAllPressBtn"), object: nil, userInfo: ["filter":filters])
-//}
